@@ -1,9 +1,9 @@
 import { PlatformInterface } from '../../types';
 
-export function newMicrobitPlatform(): PlatformInterface {
+export function newFri3dBadgePlatform(): PlatformInterface {
   return {
-    key: 'MicroBit',
-    name: 'micro:bit',
+    key: 'Fri3dBadge',
+    name: 'Fri3d Badge',
     image: '/images/microbit.png',
     capabilities: ['HexDownload', 'HexFlash'], 
     defaultExtensions: [
