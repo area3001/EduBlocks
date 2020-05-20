@@ -34,7 +34,7 @@ export interface TerminalInterface {
 
 export type Extension = 'DriveBit' |  'BitBotXL' |  'MoveMini' |  'Minibit' |     'micro:bit General' | 'Pi General' | 'Web General' | 'CircuitPython General' | 'Calliope General' | 'scrollbit' | 'enviro:bit' | 'GiggleBot' | 'EnviroBit' | 'Circuit Playground Easy';
 
-export type Platform = 'Python' | 'MicroBit' | 'RaspberryPi' | 'CircuitPython' | 'Calliope';
+export type Platform = 'Fri3dcamp' | 'Python' | 'MicroBit' | 'RaspberryPi' | 'CircuitPython' | 'Calliope';
 
 export interface PlatformSelection {
   platform: Platform;
