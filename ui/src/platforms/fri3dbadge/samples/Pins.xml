@@ -1,0 +1,39 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="import_microbit" id="R{IQXB(@}.HeS,lU?RIc" x="79" y="41">
+    <next>
+      <block type="whileout" id="~K=qQFg`!/v[Kf!.6#rn">
+        <value name="cond">
+          <shadow type="textinline" id="j_T3_A(P/?GP[9HGm#Q`">
+            <field name="text">True</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="ifinline" id="4g*-p8;Ps}OhP9Ih]WDe">
+            <value name="iftext">
+              <shadow type="textinline" id="I5V#6+H[d:T;xgP|9~F]">
+                <field name="text">True</field>
+              </shadow>
+              <block type="pintouchednew" id="62,irR*2p3v267DVe1^/">
+                <value name="text">
+                  <shadow type="textinline" id="RBPb($X_,-*Yb6kwppmm">
+                    <field name="text">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="ifstate">
+              <block type="scrollnew" id="!FR80mPmN9P981LbMcCd">
+                <value name="displaytext">
+                  <shadow type="textinline" id="K*37*t8|x=_FS-pC`(C@">
+                    <field name="text">Hello World</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

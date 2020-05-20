@@ -1,0 +1,88 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="=1^dL32n-xZ_SpU){x9(">image</variable>
+    <variable type="" id="wtm6*Bp?b.Es,/OOmMn:">var</variable>
+  </variables>
+  <block type="import_microbit" id="u@a+eCZpHn3+/xTBkG^v" x="103" y="27">
+    <next>
+      <block type="imagecreate" id="HE$WSrZtOq1U5l=X?,(0">
+        <field name="image" id="=1^dL32n-xZ_SpU){x9(" variabletype="">image</field>
+        <field name="1">9</field>
+        <field name="2">9</field>
+        <field name="3">9</field>
+        <field name="4">9</field>
+        <field name="5">9</field>
+        <field name="6">9</field>
+        <field name="7">9</field>
+        <field name="8">9</field>
+        <field name="9">9</field>
+        <field name="10">9</field>
+        <field name="11">9</field>
+        <field name="12">9</field>
+        <field name="13">9</field>
+        <field name="14">9</field>
+        <field name="15">9</field>
+        <field name="16">9</field>
+        <field name="17">9</field>
+        <field name="18">9</field>
+        <field name="19">9</field>
+        <field name="20">9</field>
+        <field name="21">9</field>
+        <field name="22">9</field>
+        <field name="23">9</field>
+        <field name="24">9</field>
+        <field name="25">9</field>
+        <next>
+          <block type="whileout" id="D~#1!6rwzT|AkG|Z7Qw7">
+            <value name="cond">
+              <shadow type="textinline" id="kPbS.9t,JF[J5xy6je.W">
+                <field name="text">True</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="ifinline" id="lnvP$lWUU]:g1QC}6n]D">
+                <value name="iftext">
+                  <shadow type="textinline" id="%i=GGa5^4Uv+9mAZmxjK">
+                    <field name="text">True</field>
+                  </shadow>
+                  <block type="internal" id="HF|:j;#b(SyU^l-[eaFX">
+                    <field name="choose">&lt;</field>
+                    <value name="first">
+                      <shadow type="textinline" id="/N+iyMd=;6*H%hfYN7oB">
+                        <field name="text">display.read_light_level()</field>
+                      </shadow>
+                    </value>
+                    <value name="last">
+                      <shadow type="textinline" id="39r|2Dk`qp,B!*Hz8?=U">
+                        <field name="text">100</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="ifstate">
+                  <block type="imagenew" id="VzcnhZLS7!Op})GpbG=E">
+                    <value name="imagevar">
+                      <shadow type="textinline" id="=q(*pVdeyCWR]9G5`]f1">
+                        <field name="text">Image.HAPPY</field>
+                      </shadow>
+                      <block type="variables_get" id="xl!Qh#q1J{vGSKVGvxqd">
+                        <field name="VAR" id="=1^dL32n-xZ_SpU){x9(" variabletype="">image</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="else" id="OT`5cJ,l!6seQg8_6sRI">
+                    <statement name="DO">
+                      <block type="disclear" id="(D=PK53$o*R}DzK|5I~R"></block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

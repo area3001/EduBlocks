@@ -1,0 +1,23 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="import_microbit" id="o-75WeEtW7nJUO-Kd{]c" x="303" y="68">
+    <next>
+      <block type="whileout" id="9W+)k_=gO65Lm3[~nu*3">
+        <value name="cond">
+          <shadow type="textinline" id="LCeX~0pKC+riT9-xv-PS">
+            <field name="text">True</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="scrollvarnew" id="J:wWK`63X5FL6eMdHDZ1">
+            <value name="displaytextvar">
+              <shadow type="textinline" id="qQ^UwaUogT|F1m}|PMcs">
+                <field name="text">temperature()</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
