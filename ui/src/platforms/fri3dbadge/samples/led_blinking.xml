@@ -1,0 +1,71 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=")]pp(Iq}~m6TB:_-?)H,">pin</variable>
+    <variable id="6#$BweWouB2oUK^VU;41">pinNumber</variable>
+  </variables>
+  <block type="import_time" id="R]X+eRCMVQ{R17]lWa/6" x="388" y="34">
+    <next>
+      <block type="typeanything" id="C[JIzg1dL_5/72=v}zml">
+        <value name="stuff">
+          <shadow type="textinline" id="d^z{RzDne5Q]=s@hgs5W">
+            <field name="text">from machine import Pin, Signal</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="typeanything" id="zPT@D|1F*1cbq6hg80Q9">
+            <value name="stuff">
+              <shadow type="textinline" id="FwF)HoXK(d!Kb*.ibS+,">
+                <field name="text">led1_pin = Pin(13, Pin.OUT)</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="whileout" id="#F=fr*X_1*RBcsJ?~}TQ">
+                <value name="cond">
+                  <shadow type="textinline" id="~5fl*Vped`]W3Wej~2Jw">
+                    <field name="text">True</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="typeanything" id="TZm.Z?mUNALuwGjgd[fH">
+                    <value name="stuff">
+                      <shadow type="textinline" id=",jSxt82RVY.iNcAitoU]">
+                        <field name="text">led1_pin.value(1)</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="sleepnew" id="/:?GL%Qb;#MlBPsT5)/h">
+                        <value name="sleep">
+                          <shadow type="textinline" id="(dCsPTqy%-02+)^2hJ#9">
+                            <field name="text">1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="typeanything" id="iCEiVGRVo=L6H_vvKHR}">
+                            <value name="stuff">
+                              <shadow type="textinline" id="V@|o6bbiat-@j28(`?EZ">
+                                <field name="text">led1_pin.value(0)</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="sleepnew" id="Zb;giBNrLgKq[-I,^B(^">
+                                <value name="sleep">
+                                  <shadow type="textinline" id="To:_#VE8RSm/AS4$,b{Q">
+                                    <field name="text">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

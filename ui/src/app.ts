@@ -1,6 +1,7 @@
 import { getBeforeScript } from './blocks/index';
 import { getIo } from './io';
 import { flashMicroBit } from './platforms/microbit/flash';
+import { flashFri3dBadge } from './platforms/fri3dbadge/flash';
 import { newSamples } from './samples';
 import { newServerConnection, ServerConnection } from './server';
 import { App, Extension, TerminalInterface } from './types';
@@ -71,6 +72,12 @@ export function newApp(): App {
     await flashMicroBit(combinedScript, onProgress);
   }
 
+  async function serialUpload(python: string, extensions: Extension[], onProgress: (progress: number) => void) {
+    const combinedScript = getCombinedScript(python, extensions);
+    await flashFri3dBadge(combinedScript, onProgress);
+  }
+
+
   async function saveHex(fileName: string, python: string, extensions: Extension[]) {
 
 
@@ -117,6 +124,7 @@ export function newApp(): App {
     openFile,
     saveFile,
     exportPython,
+    serialUpload,
     flashHex,
     saveHex,
     assignTerminal,

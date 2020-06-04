@@ -23,7 +23,7 @@ import FirebaseSelectModal from './FirebaseSelectModal';
 
 import TrinketView from './TrinketView';
 
-type AdvancedFunction = 'Export Python' | 'Themes' | 'Flash Hex' | 'Extensions' | 'Switch Language' | 'Split View';
+type AdvancedFunction = 'Export Python' | 'Themes' | 'Flash Hex' | 'Serial upload' | 'Extensions' | 'Switch Language' | 'Split View';
 let AdvancedFunctions: AdvancedFunction[] = ['Export Python', 'Themes', "Switch Language", "Split View"];
 
 type ShareOptions = 'Copy Shareable URL' | 'Copy Embed Code' ;
@@ -746,6 +746,12 @@ export default class Page extends Component<Props, State> {
             advancedFunctions = [...advancedFunctions, 'Extensions'];
         }
 
+        if (this.state.platform && this.state.platform.capabilities.indexOf('SerialUpload') !== -1) {
+            advancedFunctions = [...advancedFunctions, 'Serial upload'];
+            advancedFunctions = [...advancedFunctions, 'Extensions'];
+        }
+
+
         return advancedFunctions.map((func) => ({
             label: func,
             obj: func,
@@ -932,6 +938,22 @@ export default class Page extends Component<Props, State> {
 
         if (func === 'Extensions') {
             await this.openExtensions();
+        }
+
+        if (func === 'Serial upload') {
+            const python = this.state.doc.python;
+
+            if (python) {
+                this.setState({ modal: 'progress', progress: 0 });
+
+                try {
+                    await this.props.app.serialUpload(python, this.state.extensionsActive, (progress) => {
+                        this.setState({ progress });
+                    });
+                } finally {
+                    this.setState({ modal: null });
+                }
+            }
         }
 
         if (func === 'Flash Hex') {

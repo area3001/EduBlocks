@@ -3,25 +3,16 @@ import { PlatformInterface } from '../../types';
 export function newFri3dBadgePlatform(): PlatformInterface {
   return {
     key: 'Fri3dBadge',
-    name: 'Fri3d Badge',
-    image: '/images/microbit.png',
-    capabilities: ['HexDownload', 'HexFlash'], 
+    name: 'Fri3d Badge2',
+    image: '/images/fri3d.png',
+    // TODO: Change hex to "flash"
+    capabilities: ['SerialUpload'], 
     defaultExtensions: [
-      'micro:bit General',
+      'Fri3dBadge General',
     ],
     extensions: [
-      'scrollbit',
-      'GiggleBot',
-      //Automated Extensions under here
-
-      'DriveBit',
-
-      'BitBotXL',
-
-      'MoveMini',
-
-      'Minibit',
-      
+      // TODO: Extension on the fri3dbadge will go here
+      // see microbit code for ways to do that
     ],
   };
 }

@@ -5,6 +5,8 @@ export interface App {
   openFile(): Promise<string>;
   saveFile(fileName: string, data: string | Uint8Array, ext: string, type: string): Promise<void>;
   exportPython(fileName: string, python: string, extensions: Extension[]): Promise<void>;
+
+  serialUpload(python: string, extensions: Extension[], onProgress: (progress: number) => void): Promise<void>;
   saveHex(fileName: string, python: string, extensions: Extension[]): Promise<void>;
   flashHex(python: string, extensions: Extension[], onProgress: (progress: number) => void): Promise<void>;
 
@@ -32,7 +34,9 @@ export interface TerminalInterface {
   rows: number;
 }
 
-export type Extension = 'DriveBit' |  'BitBotXL' |  'MoveMini' |  'Minibit' |     'micro:bit General' | 'Pi General' | 'Web General' | 'CircuitPython General' | 'Calliope General' | 'scrollbit' | 'enviro:bit' | 'GiggleBot' | 'EnviroBit' | 'Circuit Playground Easy';
+export type Extension = 'DriveBit' |  'BitBotXL' |  'MoveMini' |  'Minibit' | 'micro:bit General' | 'Pi General' | 'Web General' | 
+                        'CircuitPython General' | 'Calliope General' | 'scrollbit' | 'enviro:bit' | 'GiggleBot' | 'EnviroBit' | 'Circuit Playground Easy' |
+                        'Fri3dBadge General';
 
 export type Platform = 'Fri3dBadge' | 'Python' | 'MicroBit' | 'RaspberryPi' | 'CircuitPython' | 'Calliope';
 
@@ -52,4 +56,4 @@ export interface PlatformInterface {
   extensions: Extension[];
 }
 
-export type Capability = 'HexDownload' | 'RemoteShell' | 'TrinketShell' | 'HexFlash' | 'PythonDownload';
+export type Capability = 'SerialUpload' | 'HexDownload' | 'RemoteShell' | 'TrinketShell' | 'HexFlash' | 'PythonDownload';

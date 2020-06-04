@@ -108,6 +108,56 @@ export async function getToolBoxXml(extensions: Extension[]) {
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'cpx', 'toolbox.xml'));
   }
 
+  if (extensions.indexOf('Fri3dBadge General') !== -1) {
+    (await import('./circuitpython/basic/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/basic/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'basic', 'toolbox.xml'));
+    
+    (await import('./microbit/variables/definitions')).default(Blockly.Blocks);
+    (await import('./microbit/variables/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'microbit', 'variables', 'toolbox.xml'));
+
+    (await import('./circuitpython/digital/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/digital/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'digital', 'toolbox.xml'));
+
+    (await import('./circuitpython/analog/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/analog/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'analog', 'toolbox.xml'));
+
+    (await import('./circuitpython/neopixel/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/neopixel/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'neopixel', 'toolbox.xml'));
+
+    (await import('./circuitpython/touch/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/touch/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'touch', 'toolbox.xml'));
+
+    (await import('./circuitpython/servo/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/servo/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'servo', 'toolbox.xml'));
+
+    (await import('./circuitpython/audio/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/audio/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'audio', 'toolbox.xml'));
+
+    (await import('./circuitpython/pwm/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/pwm/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'pwm', 'toolbox.xml'));
+
+    (await import('./circuitpython/dotstar/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/dotstar/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'dotstar', 'toolbox.xml'));
+
+    (await import('./circuitpython/advanced/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/advanced/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'advanced', 'toolbox.xml'));
+
+    (await import('./circuitpython/cpx/definitions')).default(Blockly.Blocks);
+    (await import('./circuitpython/cpx/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'cpx', 'toolbox.xml'));
+  }
+
   if (extensions.indexOf('micro:bit General') !== -1) {
     (await import('./microbit/basic/definitions')).default(Blockly.Blocks);
     (await import('./microbit/basic/generators')).default(Blockly.Python as any);

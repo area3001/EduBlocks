@@ -20,6 +20,9 @@ registerSamples('Python', webSamples);
 const circuitpySamples = includeFolder(path.join(__dirname, '..', 'src', 'platforms', 'circuitpython', 'samples'));
 registerSamples('CircuitPython', circuitpySamples);
 
+const fri3dBadgeSamples = includeFolder(path.join(__dirname, '..', 'src', 'platforms', 'fri3dbadge', 'samples'));
+registerSamples('Fri3dBadge', fri3dBadgeSamples);
+
 const piSamples = includeFolder(path.join(__dirname, '..', 'src', 'platforms', 'raspberrypi', 'samples'));
 registerSamples('RaspberryPi', piSamples);
 
